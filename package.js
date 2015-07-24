@@ -1,10 +1,10 @@
 Package.describe({
-  name: 'pcorey:space-lint',
+  name: 'east5th:space-lint',
   version: '0.0.1',
   // Brief, one-line summary of the package.
-  summary: '',
+  summary: 'An static analysis based check checker.',
   // URL to the Git repository containing the source code for this package.
-  git: '',
+  git: 'https://github.com/East5th/space-lint',
   // By default, Meteor will default to using README.md for documentation.
   // To avoid submitting documentation, set this field to null.
   documentation: 'README.md'
