@@ -9,6 +9,6 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
-  api.use('east5th:eslint');
+  api.use('east5th:eslint@0.0.1');
   api.addFiles('lib/check-checker.js');
 });
