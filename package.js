@@ -13,6 +13,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.1.0.2');
+  api.use('east5th:eslint');
   api.addFiles('lib/space-lint.js');
 });
 
@@ -20,8 +21,4 @@ Package.onTest(function(api) {
   api.use('tinytest');
   api.use('space-lint');
   api.addFiles('lib/space-lint-tests.js');
-});
-
-Npm.depends({
-  eslint: '0.24.1'
 });
