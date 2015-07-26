@@ -39,5 +39,5 @@ check-checker would produce the following output in your server logs:
 ```
 
 ## TODO
-[ ] Improve project directory detection (replace `process.env.PWD`)
-[ ] Investigate eslint plugin architecture
+- [ ] Improve project directory detection (replace `process.env.PWD`)
+- [ ] Investigate eslint plugin architecture
