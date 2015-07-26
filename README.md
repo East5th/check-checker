@@ -4,7 +4,7 @@
 
 Using the static analysis features of [eslint](http://eslint.org/), this package will dig through all of your Meteor methods and publications looking for arguments that are not [checked](http://docs.meteor.com/#/full/check).
 
-Unlike [audit-arguments-check](https://github.com/meteor/meteor/tree/devel/packages/audit-argument-checks), check-checker will present you with a report of unchecked method and publication arguments as soon as your application is started, rather than when the method or publication is called.
+Unlike [audit-arguments-check](https://github.com/meteor/meteor/tree/devel/packages/audit-argument-checks), check-checker will present you with a report of unchecked method and publication arguments as soon as your application is started, rather than at runtime when the method or publication is called.
 
 ## Installation
 
