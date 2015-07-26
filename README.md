@@ -1,20 +1,18 @@
-#space-lint
+#check-checker
 
-*A static analysis check checker for your Meteor apps!*
+*A static analysis check checker for your Meteor applications!*
 
 Using the static analysis features of [eslint](http://eslint.org/), this package will dig through all of your Meteor methods and publications looking for arguments that are not [checked](http://docs.meteor.com/#/full/check).
 
-Unlike [audit-arguments-check](https://github.com/meteor/meteor/tree/devel/packages/audit-argument-checks), space-lint will present you with a report of unchecked method and publication arguments as soon as your application is started, rather than when the method or publication is called.
+Unlike [audit-arguments-check](https://github.com/meteor/meteor/tree/devel/packages/audit-argument-checks), check-checker will present you with a report of unchecked method and publication arguments as soon as your application is started, rather than when the method or publication is called.
 
 ## Installation
 
-~~`meteor add east5th:space-lint`~~
-
-This package is still being developed. It'll be published soon!
+`meteor add east5th:check-checker`
 
 ## Usage
 
-space-lint will crawl your entire Meteor application looking for JavaScript files to parse. Given an example input file, `example.js` in the root of your project:
+check-checker will crawl your entire Meteor application looking for JavaScript files to parse. Given an example input file, `example.js` in the root of your project:
 
 ```
 if (Meteor.isServer) {
@@ -32,7 +30,7 @@ if (Meteor.isServer) {
 }
 ```
 
-space-lint would produce the following output in your server logs:
+check-checker would produce the following output in your server logs:
 ```
 /example.js:
    Method 'foo' has an unchecked argument: bar
