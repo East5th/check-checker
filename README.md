@@ -37,3 +37,7 @@ check-checker would produce the following output in your server logs:
    Publication 'baz' has an unchecked argument: rab
    Publication 'baz' has an unchecked argument: oof
 ```
+
+## TODO
+[ ] Improve project directory detection (replace `process.env.PWD`)
+[ ] Investigate eslint plugin architecture
