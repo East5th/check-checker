@@ -1,6 +1,6 @@
 Package.describe({
   name: 'east5th:check-checker',
-  version: '0.0.2',
+  version: '0.0.3',
   summary: 'An eslint based check checker.',
   git: 'https://github.com/East5th/space-lint',
   documentation: 'README.md',
