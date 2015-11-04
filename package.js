@@ -1,6 +1,6 @@
 Package.describe({
   name: 'east5th:check-checker',
-  version: '0.0.8',
+  version: '0.0.9',
   summary: 'An eslint based check checker.',
   git: 'https://github.com/East5th/check-checker',
   documentation: 'README.md'

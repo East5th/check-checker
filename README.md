@@ -57,4 +57,4 @@ Exception from sub fooPub id xxxxxxxxx Error: Did not check() all arguments duri
 
 ## TODO
 - [X] Improve project directory detection (replace `process.env.PWD`)
-- [ ] Add ES6 support
+- [X] Add ES6 support
