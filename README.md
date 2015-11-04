@@ -22,31 +22,32 @@ if (Meteor.isServer) {
     }
   });
 
-  Meteor.publish({
-    test: function(rab, oof) {
-      SensitiveDocuments.update(rab, oof);
-    }
+  Meteor.publish("test", function(rab, oof) {
+    SensitiveDocuments.update(rab, oof);
   });
 }
 ```
 
 check-checker would produce the following output in your server logs:
 ```
-/example.js:
-   Method 'foo' has an unchecked argument: bar
-   Publication 'baz' has an unchecked argument: rab
-   Publication 'baz' has an unchecked argument: oof
+example.js:3:4: Method 'foo' has an unchecked argument: bar
+example.js:8:2: Publication 'test' has an unchecked argument: rab
+example.js:8:2: Publication 'test' has an unchecked argument: oof
 ```
+
+check-checker is implemented as a Meteor linter, so it can also be run using the `meteor list` command.
 
 ## Use with audit-argument-checks
 
 It can be useful to use `check-checker` alongside `audit-argument-checks`. For example, if you have a publication that accepts no arguments, like:
 ```
-if (Meteor.isServer) Meteor.publish('fooPub', function(){return Foo.find()});
+Meteor.publish('fooPub', function(){
+  return Foo.find();
+});
 ```
 `audit-argument-checks` will detect and alert you if you pass any *extra* arguments into this publication:
 ```
-if (Meteor.isClient) Meteor.subscribe('fooPub', 'foo');
+Meteor.subscribe('fooPub', 'foo');
 ```
 ```
 Exception from sub fooPub id xxxxxxxxx Error: Did not check() all arguments during publisher 'fooPub'
@@ -56,4 +57,3 @@ Exception from sub fooPub id xxxxxxxxx Error: Did not check() all arguments duri
 
 ## TODO
 - [ ] Improve project directory detection (replace `process.env.PWD`)
-- [ ] Investigate eslint plugin architecture
