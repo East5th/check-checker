@@ -1,4 +1,4 @@
-#check-checker
+# check-checker
 
 *A static analysis check checker for your Meteor applications!*
 
